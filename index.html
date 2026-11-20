@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
 <title>Lunchbox</title>
 <link rel="manifest" href="manifest.webmanifest">
-<meta name="theme-color" content="#0b0d0c">
+<meta name="theme-color" content="#F6EFE0">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="apple-touch-icon" href="icon-192.png">
 <style>
-  html,body{margin:0;padding:0;height:100%;background:#0b0d0c;overflow:hidden;
-            font:14px/1.5 -apple-system,Roboto,system-ui,sans-serif;color:#8B949E}
+  html,body{margin:0;padding:0;height:100%;background:#F6EFE0;overflow:hidden;
+            font:14px/1.5 -apple-system,Roboto,system-ui,sans-serif;color:#6B5A46}
   /* The app sits in a clipping box. The frame is TALLER than the box and pulled
      up by BANNER px, so Google's grey bar is cropped off the top. It lives in
      script.google.com's own document, cross-origin, so there is no other way. */
@@ -20,30 +20,30 @@
   #app{position:absolute;left:0;width:100%;border:0;display:block}
   #msg{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;
        padding:28px;text-align:center}
-  #msg h1{color:#E8EAED;font-size:17px;font-weight:600;margin:0 0 6px}
+  #msg h1{color:#2B2118;font-size:17px;font-weight:600;margin:0 0 6px}
   #tok{width:100%;box-sizing:border-box;margin:16px 0 10px;padding:11px 12px;
-       background:#0b0d0c;color:#E8EAED;border:1px solid #262D36;border-radius:8px;
+       background:#F6EFE0;color:#2B2118;border:1px solid #E2D6BE;border-radius:8px;
        font:13px/1.3 ui-monospace,SFMono-Regular,Menlo,monospace;text-align:center}
-  #tok:focus{outline:none;border-color:#6cbe45}
-  #go{width:100%;padding:11px;background:#6cbe45;color:#0b0d0c;border:0;
+  #tok:focus{outline:none;border-color:#C4391F}
+  #go{width:100%;padding:11px;background:#C4391F;color:#FFFCF5;border:0;
       border-radius:8px;font:600 15px/1 -apple-system,Roboto,system-ui,sans-serif;
       -webkit-appearance:none}
-  #err{color:#E8698F;font-size:12px;min-height:16px;margin:8px 0 0}
+  #err{color:#C4391F;font-size:12px;min-height:16px;margin:8px 0 0}
   /* !important on purpose: #msg is an ID selector setting display:flex, which
      outranks a plain .hide class. Without this the token overlay stays on top
      of the app and swallows every tap. */
   .hide{display:none!important}
   #tune{position:fixed;left:8px;right:8px;bottom:8px;z-index:9;
-        background:#161B22;border:1px solid #262D36;border-radius:10px;
-        padding:8px;box-shadow:0 6px 24px rgba(0,0,0,.5)}
-  #tunetip{color:#8B949E;font-size:12px;line-height:1.35;margin:2px 4px 8px;text-align:center}
-  #tunetip b{color:#E8EAED;font-weight:600}
+        background:#FFFCF5;border:1px solid #E2D6BE;border-radius:10px;
+        padding:8px;box-shadow:0 6px 24px rgba(0,0,0,.18)}
+  #tunetip{color:#6B5A46;font-size:12px;line-height:1.35;margin:2px 4px 8px;text-align:center}
+  #tunetip b{color:#2B2118;font-weight:600}
   #tunerow{display:flex;gap:6px;align-items:center}
-  #tune button{flex:1;padding:10px 0;background:#1B2230;color:#E8EAED;border:1px solid #262D36;
+  #tune button{flex:1;padding:10px 0;background:#FBF3E2;color:#2B2118;border:1px solid #E2D6BE;
                border-radius:8px;font:600 15px/1 -apple-system,Roboto,system-ui,sans-serif;
                -webkit-appearance:none}
-  #tune #done{background:#6cbe45;color:#0b0d0c;border-color:#6cbe45}
-  #tune span{flex:0 0 52px;text-align:center;color:#E8EAED;
+  #tune #done{background:#C4391F;color:#FFFCF5;border-color:#C4391F}
+  #tune span{flex:0 0 52px;text-align:center;color:#2B2118;
              font:600 14px/1 ui-monospace,SFMono-Regular,Menlo,monospace}
 </style>
 </head>
