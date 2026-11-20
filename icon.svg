@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#000"/>
+  <!-- wire handle arching over the domed lid -->
+  <path d="M168 214 C168 120 344 120 344 214" fill="none" stroke="#fff" stroke-width="22" stroke-linecap="round"/>
+  <!-- domed lid -->
+  <path d="M112 262 C112 196 180 176 256 176 C332 176 400 196 400 262 Z" fill="#fff"/>
+  <!-- pail body -->
+  <rect x="112" y="274" width="288" height="124" rx="22" fill="#fff"/>
+  <!-- latch across the seam -->
+  <rect x="236" y="246" width="40" height="52" rx="9" fill="#000"/>
+  <rect x="246" y="256" width="20" height="32" rx="5" fill="#fff"/>
+</svg>
